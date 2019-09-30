@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+<style>
+
+body {
+  text-line: right;
+  background-color: white;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<p>
+  <img src="https://www.bmw.ru/content/dam/bmw/marketRU/bmw_ru/all-models/x-series/x5/2018/new-gallery/finedata_A0253639-1680%D1%85756.jpg" alt="Avatar" width="300" height="180">
+   <img src="https://cnet1.cbsistatic.com/img/GjTV_t4t-mkYivdRoZiPsVVfXe0=/980x551/2018/09/27/e3277e8a-926e-4cc9-ab34-49b7aa1e4d40/rs-2019-bmw-x5-2.jpg" alt="Avatar" width="300" height="180">
+    <img src="https://a.d-cd.net/9282506s-1920.jpg" alt="Avatar" width="300" height="180">
+</p>
+<p>
+     <img src="https://bmw-baltauto.ru/upload/x5-2018/gal-A0253629-890.jpg.asset.1528288097553.jpg" alt="Avatar" width="300" height="180"> 
+      <img src="https://i.infocar.ua/i/2/2836/98923/1920x.jpg" alt="Avatar" width="300" height="180">
+       <img src="http://bmw.autoua.net/media/catalog/8/3/p1758683-1528369159.jpg" alt="Avatar" width="300" height="180">
+</p>
+       
+       
+<table style = "width: 10%">
+  <tr>
+    <td>Brand</td>
+    <td>BMW</td>
+  </tr>
+
+  <tr>
+    <td>Model</td>
+    <td>X5</td>
+  </tr>
+
+  <tr>
+    <td>Year</td>
+    <td>1999</td>
+  </tr>
+
+  <tr>
+    <td>Year</td>
+    <td>1999</td>
+  </tr>
+
+  <tr>
+    <td>Mileage</td>
+    <td>120 000</td>
+  </tr>
+
+  <tr>
+    <td>Price</td>
+    <td>125 000</td>
+  </tr>
+
+</table>
+</body>
+</html>
+

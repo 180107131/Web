@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+<style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: bottom;
+  padding: px 25px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  margin-top: 0px;
+}
+
+body {
+  text-line: right;
+  background-color: white;
+  color: black;
+}
+img{
+	float: left;
+    margin-top: 8px;
+    padding-right: 20px;
+    }
+    .car1 {
+  background-color: white;
+  color: black;
+  margin-left: 300px;
+ 
+ 
+}
+.car2 {
+  background-color: white;
+  color: black;
+  margin-left: 300px;
+ 
+}
+</style>
+</head>
+<body>
+<table style="width:100%">
+  <tr>
+<th>BMW X5</th>
+</tr>
+
+<div class="car1">
+<table style="width:100%">
+  <tr>
+  <td>
+  <img src="https://www.bmw.ru/content/dam/bmw/marketRU/bmw_ru/all-models/x-series/x5/2018/new-gallery/finedata_A0253639-1680%D1%85756.jpg" alt="Avatar" width="300" height="180">
+  <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+  </td>
+  <td>
+  The BMW E53 is the first-generation BMW X5 mid-sized luxury crossover SUV. It was produced from 1999-2006[2] and was replaced by the BMW E70. The E53 was developed at a time when BMW still owned Land Rover and as such shares many components and designs with both the Land Rover Range Rover L322 model and the BMW E39 5 Series (specifically engines and electronic systems). The entire in-car entertainment system (Radio Function, Navigation System, Television and Telecommunications systems) are shared with other BMWs and L322.
+  </td>
+  </tr>
+</div>
+<div class="car2">
+<table style="width:100%">
+  <tr>
+<th>Porsche Cayenne</th>
+</tr>
+ <tr>
+  <td>
+<img src="https://img2.automoto.ua/overview/Porsche-Cayenne-2019-453-huge-1378.jpg" alt="Avatar" width="300" height="180">
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+</td>
+<td>
+  <p>The Porsche Cayenne is a mid-size luxury crossover sport utility vehicle produced by the German manufacturer Porsche since 2002, with North American sales beginning in 2003. It is the first V8-engined vehicle built by Porsche since 1995, when the Porsche 928 was discontinued. It is also Porsche's first off-road variant vehicle since its Super and Junior tractors of the 1950s, and the first Porsche with four doors. Since 2008, all engines have featured direct injection technology.The second-generation Cayenne (Type 92A) was unveiled at the 2010 Geneva Motor Show in March following an online reveal. 
+    </td>
+  </tr>
+</div>
+
+
+</body>
+
+
+</html>

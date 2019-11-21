@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      #cards .card{
+        border:1px solid red;
+        display:flex;
+        width:300px;
+      }
+      #cards .card .title{
+        flex-grow: 1;
+      }
+      #cards .card .price{
+        font-weight: bold;
+        padding-right: 20px;
+      }
+      #loading{
+        display: none;
+      }
+      #cards{
+        width:300px;
+        height:200px;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Load</button>
+    <div id="cards">
+      <img width="300px" height="200px" id="loading" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>
+    </div>
+  </body>
+<script defer>
+var title = document.createElement("div");title.className = "title";
+var card = document.createElement("div");card.className = "card";
+var cards = ["Toyota Camry 50","Toyota Carina","Vollkswagen Tuareg","Mercedes C100"];
+var prices = ["50000","40000","35000","45000"];
+var price = document.createElement("div");price.className = "price";
+var load = document.querySelector('button');
+var cars = document.getElementById('cards');
+  load.onclick = function(){
+    this.innerHTML = "Loading...";
+for(var name in cards){
+  title.innerHTML = cards[name];
+  price.innerHTML = prices[name];
+  card.appendChild(title);card.appendChild(price);
+  cars.appendChild(card);
+}
+  this.innerHTML = "Items are loaded";
+}
+</script>
+</html>

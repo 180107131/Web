@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  </head>
+<style>
+#bigImage img{
+  width: 850px;
+  height: 500px;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+#carousel{
+  position: relative;
+  bottom: 10px;
+  left: 80px;
+  border-left: 4px solid red;
+  background-color: white;
+  width: 660px;
+}
+#carousel img{
+  width: 120px;
+  height: 70px;
+  position: relative;
+  z-index: 2;
+  margin: 10px 10px;
+}
+#car1, #car2, #car3, #car4{
+  position: relative;
+  left: 45px;
+}
+#left img{
+  width: 40px;
+  position: relative;
+  right: 7px;
+  bottom: 2px;
+}
+#right img{
+  width: 40px;
+  position: relative;
+  right: 7px;
+  bottom: 2px;
+}
+
+#left{
+  position: relative;
+  bottom: 80px;
+  left: 90px;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  outline: none;
+}
+#right{
+  position: relative;
+  bottom: 80px;
+  left: 655px;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  outline: none;
+}
+#greyborder{
+  position: relative;
+  bottom: 580px;
+  left: 860px;
+  border: 2px solid rgb(60, 60, 60);
+  width: 380px;
+  height: 570px;
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
+#greyborder #title{
+  position: relative;
+  top: 50px;
+  right: 50px;
+  font-size: 38px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+#greyborder #def{
+  position: relative;
+  top: 100px;
+  margin-right: 40px;
+  margin-left: 40px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 12.5px;
+}
+#greyborder #ShowMore{
+  position: absolute;
+  top: 480px;
+  left: 50px;
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 10px;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  outline: none;
+}
+#showarrow{
+  width: 40px;
+  position: relative;
+  bottom: 670px;
+  left: 1067px;
+  border: 2px solid white;
+  background-color: white;
+  height: 42px;
+}
+</style>
+  <body>
+    <div id="bigImage">
+      <img id="car0" src="car0.jpg"/>
+    </div>
+    <div id="carousel">
+          <img id="car1" src="car1.jpg"/>
+          <img id="car2" src="car2.jpg"/>
+          <img id="car3" src="car3.jpg"/>
+          <img id="car4" src="car4.jpg"/>
+    </div>
+    <button id="left" onclick="LeftClick()"><img src="https://icons-for-free.com/iconfiles/png/512/arrow+circle+arrow+left+arrowleftcircle+left+icon+icon-1320185730574257581.png"></button>
+    <button id="right" onclick="RightClick()"><img src="https://icons-for-free.com/iconfiles/png/512/arrow+circle+arrow+right+arrowrightcircle+right+icon+icon-1320185730725758186.png"></button>
+    <div id="greyborder">
+      <div id="title">Lamborghini Aventador SVJ</div>
+      <div id="def">The new Lamborghini Aventador SVJ adopts the Italian automaker's famous "Jota" moniker, which adds another layer of hardcore-ness to the already racy SV trim by calling on the spirit of the powerful Miura P400 Jota from the '70s, which was designed to meet the FIA's "J" class rulebook. This new Raging Bull comes to life via a 6.5-liter, 48-valve V-12 that carries 4.42 pounds with each of its 759 horses. As a result, the SVJ can deliver a zero to 60 time of 2.8 and reach a maximum speed of 217 miles per hour. </div>
+      <button id="ShowMore" onclick= "Showmore()">Show more</button>
+    </div>
+    <img id="showarrow" src="https://www.stickpng.com/assets/images/585e469fcb11b227491c3374.png">
+    <script>
+    function LeftClick() {
+	let a = document.getElementById("car1").src;
+	let b = document.getElementById("car2").src;
+	let c = document.getElementById("car3").src;
+	let d = document.getElementById("car4").src;
+	let ekran = document.getElementById("car0").src;
+  var all = new Array();
+  var num = 0;
+  var num2 = 0;
+  all[0] = d;
+  all{1} = c;
+  all[2] = b;
+  all[3] = a;
+  for(var i = 0; i<4; i++){
+    if(ekran.src == all[i]){
+      num == i;
+      break;
+    }
+    ekran.src = all{num};
+    num++;
+}
+}
+function RightClick() {
+  let a = document.getElementById("car1").src;
+	let b = document.getElementById("car2").src;
+	let c = document.getElementById("car3").src;
+	let d = document.getElementById("car4").src;
+	let ekran = document.getElementById("car0").src;
+  var all = new Array();
+  var num = 0;
+  all[0] = a;
+  all{1} = b;
+  all[2] = c;
+  all[3] = d;
+  for(var i = 0; i<4; i++){
+    if(ekran.src == all[i]){
+      num == i;
+      break;
+    }
+    ekran.src = all{num};
+
+    num++;
+  }
+}
+    </script>
+  </body>
+
+</html>

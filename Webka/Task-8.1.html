@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+#news{
+	border:1px solid red;
+	width:400px;
+	height:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="news"></div>
+<button id="sport">Load Sport news</button>
+<button id="politics">Load Politics news</button>
+<button id="bussiness">Load Bussiness news</button>
+
+
+<script>
+var sport = document.getElementById('sport');
+var politics = document.getElementById('politics');
+var bussiness = document.getElementById('bussiness');
+var news = document.getElementById('news');
+var para = document.createElement("p");
+var h = document.createElement("h1")
+sport.onclick = function(){
+	h.innerHTML = "Dow Jones index has fallen";
+	para.innerHTML = "Dow Jones index has fallen,because of prices for petrol";
+	news.appendChild(h);
+	news.appendChild(para);
+}
+politics.onclick = function(){
+	h.innerHTML = "Trump visited UK";
+	para.innerHTML = "Trumo started his foreign tour by visiting UK";
+	news.appendChild(h);
+	news.appendChild(para);
+}
+bussiness.onclick = function(){
+	h.innerHTML = "Dow Jones index has fallen";
+	para.innerHTML = "Dow Jones index has fallen,because of prices for petrol";
+	news.appendChild(h);
+	news.appendChild(para);
+}
+</script>
+</body>
+</html>

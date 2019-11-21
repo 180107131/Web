@@ -1,0 +1,49 @@
+<html>
+
+  <head>
+	<style>
+		div[data-status='done'] span{
+		  text-decoration:line-through;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="tasks">
+      <div><button id = "b">Finish</button><span>Finish web tasks</span></div>
+      <div><button id = "b">Finish</button><span>Go to gym</span></div>
+      <div><button id = "b">Finish</button><span>Clean home</span></div>
+      <div><button id = "b">Finish</button><span>Start project</span></div>
+      <div><button id = "b">Finish</button><span>Prepare to calculus</span></div>
+    </div>
+    <script>
+      var spans = document.getElementById('tasks').getElementsByTagName('span');
+      var knopka = document.getElementById("tasks").getElementsByTagName('button');
+      if(knopka[0]){
+        knopka[0].onclick = function(){
+      spans[0].style.textDecoration = "line-through";
+    }
+  }
+  if(knopka[1]){
+    knopka[1].onclick = function(){
+  spans[1].style.textDecoration = "line-through";
+}
+}
+if(knopka[2]){
+  knopka[2].onclick = function(){
+spans[2].style.textDecoration = "line-through";
+}
+}
+if(knopka[3]){
+  knopka[3].onclick = function(){
+spans[3].style.textDecoration = "line-through";
+}
+}
+if(knopka[4]){
+  knopka[4].onclick = function(){
+spans[4].style.textDecoration = "line-through";
+}
+}
+    </script>
+  </body>
+
+</html>

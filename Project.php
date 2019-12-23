@@ -131,6 +131,19 @@ h5{
   font-variant: small-caps;
   margin-left: -200px;
 }
+h2{
+  position: absolute;
+  top: 2.5%;
+  right: 120px;
+  font-family: sans-serif;
+  color: #676967;
+  font-variant: small-caps;
+  text-align: center;
+  background: inherit;
+  z-index: 2;
+  -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 5s forwards;
+}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -165,11 +178,47 @@ footer{
   height: 50px;
   text-align: center;
 }
+#reg{
+  cursor: pointer;
+    border-radius: 5em;
+    color: #2d6f2c;
+    background: #EBFDD0;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 30%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    margin-top: 10px;
+}
 .loginPage{
   position: absolute;
   top: 20%;
   left: 38%;
   display: none;
+}
+.registrationpage{
+  position: absolute;
+  top: 20%;
+  left: 38%;
+  display: none;
+}
+.main1{
+  position: absolute;
+     background-color: #FFFFFF;
+     width: 400px;
+     height: 400px;
+     margin: 7em auto;
+     border-radius: 1.5em;
+     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+     z-index: 2;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
 }
 .main {
   position: absolute;
@@ -536,17 +585,27 @@ footer{
   <button onclick="changePage()">Categories</button>
   </div>
 </header>
-<div class="loginPage" id = "loginPage" >
-  <div class="main">
+<div class="loginPage" id = "loginPage">
+  <div class="main" id = "main">
   <button type="button" align ="right" id ="close" name="button" onclick="LoginMouseout()">x</button>
   <p class="sign" align="center">Sign in</p>
   <form class="form1" action = 'Project.php' method = 'post'>
     <input class="un " type="text" align="center" placeholder="Username" name="username">
     <input class="pass" type="password" align="center" placeholder="Password" name="password">
     <input class="submit" align="center" type="submit" value="Sign in"></input>
-    <p class="regist" align="center"><a href="#">Regerstration</p>
+    <button type="button" id = "reg" name="button" onclick="regPage()">Regerstration</button>
     <button type="button" name="button" onclick="adminpage();LoginMouseout()" id = "Admin">Admin page</button>
   </div>
+</div>
+<div class="registrationpage" id = "registrationpage">
+  <div class="main1" id = "main1">
+  <button type="button" align ="right" id ="close" name="button" onclick="LoginMouseout()">x</button>
+  <p class="sign" align="center">Registration</p>
+  <form class="form1" action = 'Project.php' method = 'post'>
+    <p>Enter your name: </p> <input class="un " type="text" align="center" placeholder="Username" name="username1">
+    <p>Enter your password: </p><input class="pass" type="password" align="center" placeholder="Password" name="password1">
+    <input class="submit" align="center" type="submit" value="Sign up"></input>
+    </div>
 </div>
 <div class="adminpage" id="adminpage">
   <h1>This is the Admin page</h1>
@@ -734,6 +793,11 @@ var currentPage = document.getElementById('mainpage');
           currentPage = document.getElementById('adminpage');
           document.getElementById('footer').style.bottom = 0;
         }
+        function regPage(){
+          document.getElementById('loginPage').style.display = "none";
+          document.getElementById('registrationpage').style.display = "block";
+          currentPage = document.getElementById('registrationpage');
+        }
 </script>
 <?php
  if(isset($_POST['username']) && isset($_POST['password'])){
@@ -752,13 +816,36 @@ var currentPage = document.getElementById('mainpage');
     $usr = $row['username'];
     $psw = $row['password'];
     if ($usr == $username && $password == $psw){
-     echo "<p>Hello ".$username;
+     echo "<h2>Hello ".$username;
     }
     else{
-     echo "<p>There's no such user</p>";
+     echo "<h2>There's no such user</h2>";
     }
   }
  }
 ?>
+<?php
+$servername = "localhost";
+$username = $_POST['username1'];
+$password = $_POST['password1'];
+$dbname = "web";
+
+// Create connection
+$conn = mysqli_connect('localhost', 'root', '', 'web');
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "INSERT INTO `web` (`username`, `password`) VALUES ('$username', '$password')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+ ?>
 </body>
 </html>
